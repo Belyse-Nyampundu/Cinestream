@@ -40,13 +40,15 @@
     document.querySelector("h1").classList.toggle("hide__nav");
   });
  
+let video = document.querySelector('video');
+video.addEventListener('play', function() {
+  video.muted = false; // Unmute the video when it starts playing
+});
   window.addEventListener("resize", function() {
     var video = document.querySelector("video");
     video.style.minHeight = window.innerHeight + "px";
     video.style.minWidth = window.innerWidth + "px";
   });
-
-
 
 let button = document.getElementById("cover");
 button.addEventListener('click',function(){
